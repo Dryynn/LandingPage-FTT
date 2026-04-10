@@ -59,6 +59,7 @@
 .hero-title span {
   background: linear-gradient(90deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: 800;
   display: inline-block;
@@ -137,7 +138,6 @@
   background: linear-gradient(135deg, #e60b13 0%, #870006 100%);
   border: none;
   padding: 1.1rem 2.8rem;
-  font-size: 1.15rem;
   font-weight: 700;
   box-shadow: 0 10px 25px rgba(230, 11, 19, 0.4);
   transition: all 0.3s ease;
@@ -304,32 +304,15 @@
   }
 
   .hero-visual {
-    height: 280px;
-    margin-top: 2rem;
+    display: none;
   }
 
-  .isometric-stack {
-    transform: scale(0.65) rotateX(15deg) rotateY(-35deg) rotateZ(10deg);
-  }
-
-  .isometric-stack:hover {
-    transform: scale(0.7) rotateX(10deg) rotateY(-30deg) rotateZ(5deg);
-  }
 }
 
 /* Fix para celulares muito pequenos e proporções do dev tools (<= 468px) */
 @media (max-width: 480px) {
-  .isometric-stack {
-    transform: scale(0.45) rotateX(10deg) rotateY(-35deg) rotateZ(10deg);
-  }
-
-  .isometric-stack:hover {
-    transform: scale(0.5) rotateX(10deg) rotateY(-35deg) rotateZ(10deg);
-  }
-
   .hero-visual {
-    height: 200px;
-    margin-top: 1rem;
+    display: none;
   }
 
   .hero-title {
