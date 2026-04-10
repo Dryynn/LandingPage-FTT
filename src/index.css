@@ -1,30 +1,38 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600&display=swap');
 
 :root {
-  --color-primary: #620000; /* Figma exact Red */
+  --color-primary: #8f0000;
+  /* Figma exact Red */
   --color-primary-light: #b20710;
   --color-primary-dark: #3a0000;
-  --color-secondary: #0a0a0a; /* Figma exact Black Header */
-  --color-bg-light: #e8e8e8; /* Figma gradient end */
-  --color-bg-alt: #d2d2d2; /* Figma gradient start */
-  --color-bg-dark: #161616; /* Figma Footer */
-  --color-text: #1a1a1a; 
+  --color-secondary: #0a0a0a;
+  /* Figma exact Black Header */
+  --color-bg-light: #e8e8e8;
+  /* Figma gradient end */
+  --color-bg-alt: #d2d2d2;
+  /* Figma gradient start */
+  --color-bg-dark: #161616;
+  /* Figma Footer */
+  --color-text: #1a1a1a;
   --color-text-light: #707070;
   --color-white: #FFFFFF;
-  --color-card-light: #f7f7f7; /* Reasons card */
-  --color-card-dark: #d9d9d9; /* Impact card */
-  
+  --color-card-light: #f7f7f7;
+  /* Reasons card */
+  --color-card-dark: #d9d9d9;
+  /* Impact card */
+
   --font-heading: 'Outfit', sans-serif;
   --font-body: 'Inter', sans-serif;
-  
+
   --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
   --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
   --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
   --shadow-card: 0 4px 20px rgba(12, 12, 13, 0.05);
-  
+
   --radius-sm: 0.25rem;
   --radius-md: 0.5rem;
-  --radius-lg: 8px; /* Figma uses 8px */
+  --radius-lg: 8px;
+  /* Figma uses 8px */
   --radius-xl: 1.5rem;
 }
 
@@ -32,6 +40,10 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -43,7 +55,12 @@ body {
   overflow-x: hidden;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-heading);
   font-weight: 700;
   color: var(--color-secondary);

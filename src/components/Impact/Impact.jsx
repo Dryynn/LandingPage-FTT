@@ -23,7 +23,7 @@ const testimonials = [
 
 const Impact = () => {
   return (
-    <section className="impact">
+    <section className="impact" id="projetos">
       <div className="container">
         <div className="impact-header">
           <h2 className="section-title">O impacto do nosso trabalho</h2>

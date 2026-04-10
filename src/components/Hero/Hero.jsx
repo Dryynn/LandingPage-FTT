@@ -33,7 +33,7 @@ const Hero = () => {
 
       <div className="container hero-container">
         <div className="hero-content">
-          <div className="badge">Inovação e Tecnologia</div>
+          <div className="badge">CONECTANDO MENTES BRILHANTES AO MERCADO</div>
           <h1 className="hero-title">
             Onde a Academia <span>Impulsiona</span> a Inovação do Mercado
           </h1>

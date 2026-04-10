@@ -2,7 +2,7 @@ import './CTA.css';
 
 const CTA = () => {
   return (
-    <section className="cta">
+    <section className="cta" id="inscreva-se">
       <div className="container">
         <div className="cta-box glass-panel">
           <div className="cta-content">
