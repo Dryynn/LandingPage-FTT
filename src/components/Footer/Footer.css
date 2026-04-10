@@ -1,0 +1,161 @@
+.footer {
+  background-color: var(--color-bg-dark); /* #161616 from index.css */
+  color: #d1d5db;
+  padding: 5rem 0 3rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 4rem;
+}
+
+.footer-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-left {
+  flex: 1;
+  max-width: 500px;
+}
+
+.footer-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+  flex: 1;
+  max-width: 450px;
+}
+
+.footer-title {
+  color: var(--color-white);
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  position: relative;
+  letter-spacing: 0.5px;
+}
+
+.course-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 3rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.course-list li {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: var(--color-white);
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.course-icon {
+  width: 45px;
+  height: 45px;
+  object-fit: contain;
+  background-color: transparent !important;
+}
+
+.social-links {
+  display: flex;
+  gap: 1.25rem;
+}
+
+.footer-right .social-links {
+  justify-content: flex-end;
+  margin-top: 2rem;
+}
+
+.social-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-white);
+  transition: all 0.3s ease;
+  background-color: transparent;
+}
+
+.social-circle:hover {
+  background-color: rgba(255,255,255,0.1);
+  transform: translateY(-3px);
+}
+
+.footer-logo-img {
+  width: 380px;
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 1.5rem;
+}
+
+.footer-address {
+  color: var(--color-white);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 0.5rem;
+  max-width: 350px;
+}
+
+.footer-phone {
+  color: #0284c7; /* Azul claro estilo Figma */
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.footer-phone:hover {
+  text-decoration: underline;
+}
+
+/* Redes Sociais Cores no Figma para o lado da unievangelica */
+.bg-blue { color: white; background-color: #1877F2; border-color: #1877F2; }
+.bg-blue:hover { background-color: #0d5fc7; border-color: #0d5fc7; }
+.bg-black { color: white; background-color: #000000; border-color: #333; }
+.bg-black:hover { background-color: #222; border-color: #444; }
+.bg-red { color: white; background-color: #FF0000; border-color: #FF0000; }
+.bg-red:hover { background-color: #cc0000; border-color: #cc0000; }
+.bg-gradient { 
+  color: white; 
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+
+}
+.bg-gradient:hover {
+  opacity: 0.9;
+  border-color: transparent;
+}
+
+@media (max-width: 900px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 3.5rem;
+  }
+  
+  .footer-col {
+    align-items: center;
+    text-align: center;
+  }
+  
+  .footer-right, .footer-left {
+    align-items: center;
+    text-align: center;
+  }
+  
+  .footer-right .social-links, .footer-left .social-links {
+    justify-content: center;
+  }
+}

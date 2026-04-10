@@ -1,0 +1,57 @@
+import { useState, useEffect } from 'react';
+import { Menu, X } from 'lucide-react';
+import './Header.css';
+
+const Header = () => {
+  const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  return (
+    <header className={`header ${scrolled ? 'scrolled' : ''}`}>
+      <div className="container header-content">
+        <div className="header-logo">
+          <div className="logo-icon">
+            <svg viewBox="0 0 51 51" fill="none" xmlns="http://www.w3.org/2000/svg" className="logo-icon-svg">
+              <path d="M22.3784 0.123085C12.9102 1.43986 5.28127 7.25037 1.81167 15.7989C0.181377 19.7702 -0.424755 25.1836 0.306784 29.3011C1.56085 36.5121 5.46938 42.5107 11.4889 46.4191C13.8925 47.9867 16.2962 49.0108 19.2432 49.8052C21.2497 50.3277 21.7513 50.3694 25.2 50.3694C28.398 50.3694 29.234 50.3067 30.8433 49.9096C35.9014 48.6347 39.3919 46.6908 42.987 43.0959C46.8328 39.2501 48.881 35.4669 49.9888 30.1581C50.8457 26.0196 50.4696 20.5434 49.0274 16.7395C45.8294 8.21184 38.6395 2.10869 29.861 0.436601C27.6874 0.0185775 24.1551 -0.127729 22.3784 0.123085ZM30.4462 6.70695C37.0929 8.39993 42.5481 13.8342 44.3664 20.6062C44.9725 22.9262 45.0352 27.8799 44.471 30.0118C42.8824 35.9686 39.2665 40.4204 33.9785 42.9704C31.5122 44.1409 30.07 44.559 27.4364 44.8307C20.6018 45.5413 13.8925 42.5525 9.79591 36.9717C8.47913 35.1744 7.20417 32.4781 6.66073 30.3043C5.9919 27.65 5.9919 23.1561 6.68164 20.6272C8.16562 15.0883 11.7188 10.6991 16.756 8.14912C20.9989 6.01721 25.7435 5.51558 30.4462 6.70695Z" fill="currentColor"/>
+              <path d="M34.4357 14.5818L26.8204 18.9341C26.8204 18.9341 21.1367 22.3239 21.1367 22.4075L23.0073 23.4316L24.8779 24.4557C25.1079 24.4557 39.8624 15.786 39.8624 15.786C39.8624 15.786 39.8624 15.786 36.1212 13.5078C36.1212 13.5078 36.1212 13.5078 34.4357 14.5818Z" fill="currentColor"/>
+              <path d="M13.6449 15.0688C11.9102 16.1766 13.6449 15.0688 11.9102 16.1766C20.6051 21.1929 11.9102 16.1766 20.6051 21.1929C24.4509 19.061 20.6051 21.1929 24.4509 19.061C15.4814 13.8594 24.4509 19.061 15.4814 13.8594C13.6449 15.0688 15.4987 13.8545 13.6449 15.0688Z" fill="currentColor"/>
+              <path d="M10.3423 20.1308V22.3044L14.7942 24.8754C17.2188 26.2756 20.6675 28.2613 22.444 29.2854C24.1997 30.2888 25.6838 31.1247 25.7464 31.1247C25.7881 31.1247 25.7881 30.1216 25.7673 28.8883L25.7046 26.6519L23.092 25.1679C21.6498 24.3527 18.2429 22.388 15.5049 20.8204C12.7877 19.2528 10.4886 17.957 10.4468 17.957C10.3841 17.957 10.3423 18.9393 10.3423 20.1308Z" fill="currentColor"/>
+              <path d="M36.1736 20.778L31.8889 23.3695C31.8889 23.3695 31.8889 24.1882 31.8889 24.269C31.8889 24.3498 31.9097 27.6964 31.9097 27.6964C31.9097 27.6964 31.9097 27.6964 40.7718 22.3769C40.7718 18.1027 40.7718 22.4084 40.7718 20.2555C40.7718 17.9063 40.7718 22.3769 40.7718 17.9062C31.8889 23.4325 40.7718 17.9063 36.1736 20.778Z" fill="currentColor"/>
+              <path d="M26.9832 24.6363C26.9832 28.2341 26.9832 32.8909 26.9832 33.631C26.9832 38.3755 26.9832 38.1281 26.9832 42.1757C29.2319 40.8266 26.9832 42.1757 29.2319 40.8266L30.7391 39.8623V31.3553C30.7391 26.548 30.7391 23.2379 30.7391 22.2734C26.9832 24.6363 30.7391 22.2734 26.9832 24.6363Z" fill="currentColor"/>
+              <path d="M20.6194 29.0586C20.6194 29.0586 20.6194 29.0586 20.6533 34.254C20.6871 39.4496 20.6871 39.4496 20.6871 39.4496C24.4442 41.6203 20.6871 39.4496 24.4442 41.6203C24.4442 41.6203 24.4442 41.6203 24.5906 31.4204C20.6194 29.0586 24.5906 31.4204 20.6194 29.0586Z" fill="currentColor"/>
+            </svg>
+          </div>
+        </div>
+        
+        <nav className={`header-nav ${menuOpen ? 'open' : ''}`}>
+          <a href="#sobre" className="nav-link" onClick={() => setMenuOpen(false)}>Sobre</a>
+          <a href="#projetos" className="nav-link" onClick={() => setMenuOpen(false)}>Projetos</a>
+          <a href="#por-que" className="nav-link" onClick={() => setMenuOpen(false)}>Por que fazer parte</a>
+          <a href="#contato" className="nav-link" onClick={() => setMenuOpen(false)}>Contato</a>
+          <div className="header-actions-mobile">
+            <a href="#inscreva-se" className="btn btn-primary" onClick={() => setMenuOpen(false)}>Inscreva-se Agora</a>
+          </div>
+        </nav>
+        
+        <div className="header-right-actions">
+          <div className="header-actions">
+            <a href="#inscreva-se" className="btn btn-primary">Inscreva-se Agora</a>
+          </div>
+          <button className="mobile-menu-btn" onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle Menu">
+            {menuOpen ? <X size={28} /> : <Menu size={28} />}
+          </button>
+        </div>
+      </div>
+    </header>
+  );
+};
+
+export default Header;

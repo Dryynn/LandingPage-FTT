@@ -1,0 +1,17 @@
+<svg preserveAspectRatio="none" width="100%" height="100%" overflow="visible" style="display: block;" viewBox="0 0 1645.67 1752.02" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Esfumado">
+<mask id="mask0_445_1032" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="1646" height="1752">
+<path id="Vector 116" d="M0.000954145 79.436C409.906 80.0111 1512.86 -83.4179 1481.73 56.9548L1645.66 1653.85L209.898 1752L0.000954145 79.436Z" fill="url(#paint0_linear_445_1032)"/>
+</mask>
+<g mask="url(#mask0_445_1032)">
+</g>
+<g id="Frame 13">
+</g>
+</g>
+<defs>
+<linearGradient id="paint0_linear_445_1032" x1="1308.48" y1="728.788" x2="633.547" y2="753.722" gradientUnits="userSpaceOnUse">
+<stop stop-color="#C4C4C4"/>
+<stop offset="1" stop-color="#C4C4C4" stop-opacity="0"/>
+</linearGradient>
+</defs>
+</svg>
